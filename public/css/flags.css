@@ -1,0 +1,70 @@
+
+   
+
+
+    .docgrid {
+      display: grid;
+      /* grid-template-columns: repeat(2, 1fr); */
+      grid-template-rows: auto;
+      overflow: hidden;
+      margin: 1rem;
+    }
+  
+  
+    [is*="flag-"] {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* flags with extra detail */
+    [is*="flag-zm"],[is*="flag-ug"] {
+      --flagmeisterdetail: 1;
+      --flagmeistersource: //raw.githubusercontent.com/kent1D/svg-flags/master/flags/;
+    }
+
+    [is*="flag-"]:hover:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: attr(is);
+      font-size: 100%;
+      background: rgba(136, 49, 49, 0.4);
+      color: white;
+    }
+
+    /* section {
+      max-width: 1280px;
+      margin: 0 auto;
+    } */
+
+    .flaggrid img {
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
+      border: var(--bordersize) solid transparent;
+    }
+
+    .docgrid img {
+      --flagmeisterdetail: 9999;
+      max-width: 24%;
+    }
+   
+
+    #flags8 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        /* background: grey; */
+      }
+
+      #flags8 img {
+        display: inline-block;
+        width: 100% !important;
+        height: 100%;
+        border-radius: 15%;
+      }
+
+      #flags8 [is] {
+        display: inline-block;
+        width: 400%;
+      }
